@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f5f5f5;
+  padding: 2rem;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background: orange;
+  margin: 0 auto 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.4s ease, background 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.1);
+}
+
+.controls button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  background: #333;
+  color: white;
+  transition: background 0.3s;
+}
+
+.controls button:hover {
+  background: #666;
+}
+
+/* Keyframe Animation */
+@keyframes bounceSpin {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.2) rotate(15deg);
+  }
+  50% {
+    transform: scale(0.9) rotate(-15deg);
+  }
+  75% {
+    transform: scale(1.1) rotate(10deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.animate {
+  animation: bounceSpin 0.8s ease-in-out;
+}
